@@ -4,3 +4,20 @@
 이전 실습 코드에서 시작
 제목 #intro_title 위에 마우스 커서가 올라가면 배경색이 노란색 (yellow) 로 4초동안 점진적으로 변화하도록 설정
 이미지 파일은 W3C_logo.gif를 활용하여 절대위치로 위에서 15px, 오른쪽으로 50px 배치하고 15도 각도로 회전-->
+
+<!DOCTYPE html>
+<html>
+     <head>
+        <style type="text/css">
+            p{padding:12px;border-color:blue; border-style:dotted}
+            #intro_title{position:relative; left:10%;width:60%;padding:5px;border-style:double;border-width:midium}
+            #intro_title:hover{transition: background-color 4s;background-color:yellow}
+            #w3c_float{float:right;padding:5px;border-width:thin;border-color:black;border-radius:10px;border-style:solid;position:absolute;top:15px;right:50px;transform:rotate(15deg)}
+        </style>
+    </head>
+    <body>
+        <h3 id="intro_title">5.5 새로운 문서 표준 HTML5</h3>
+        <img id="w3c_float" src="W3C_logo.gif" width="72" heigth="40">
+        <p>현재 W3C에서 표준안 개발을 하고 있는 HTML5는 차세대 웹문서 표준안으로 많은 관심이 집중되고 있다. 측히 표준안 개발에 마이크로 소프트, 모질라, 애플, 구글, 오페라 등 대다수 웹브라우저 개발사가 참여하고 있다.</p>
+    </body>
+</html>
