@@ -3,3 +3,41 @@
 예약자는 반드시 입력이 되어야 하고, 연락처는 "000-0000-0000" 보조 문구가 나타나도록 하세요. 
 예약인원은 선택목록으로 2명, 3명, 4명, 5명이상 선택이 가능하게 작성하세요. 
 또한, 날짜 및 시간, 메뉴 선택을 위한 폼 양식도 작성하세요.-->
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <p>
+        <form>
+            <fieldset>
+                <legend>예약자 정보</legend>
+                예약자: &nbsp; <input type="text" name="예약자"><br>
+                연락처: &nbsp; <input type="phonenumber" name="number" preholder="000-0000-0000"><br>
+                예약인원: &nbsp; <select name="예약인원" size="1">
+                    <option vlaue="2명">2명</option>
+                    <option vlaue="3명">3명</option>
+                    <option vlaue="4명">4명</option>
+                    <option vlaue="5명이상">5명 이상</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>예약 시간 선택</legend>
+                <input type="date" name="날짜만" value="연도-월-일">&nbsp;<input type="time" name="시간만">
+            </fieldset>
+            <fieldset>
+                <legend>메뉴 선택</legend>
+                <input type="radio" name="menu" value="a">코스A &nbsp;
+                <input type="radio" name="menu" value="b">코스B &nbsp;
+                <input type="radio" name="menu" value="c">코스C &nbsp;
+                <input type="radio" name="menu" value="d">코스D <br>
+                요청사항:<br>
+                <textarea name="요청사항" rows="5" cols="40"></textarea>
+            </fieldset><br>
+            <input type="submit" name="예약" value="예약"> &nbsp;
+            <input type="reset" name="취소" value="취소">
+        </form>
+    </p>
+    </body>
+
+</html>

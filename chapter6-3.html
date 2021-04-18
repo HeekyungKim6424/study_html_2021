@@ -2,3 +2,39 @@
 아래의 결과화면과 같이 설문조사를 하기 위한 폼 양식을 만드세요.
 나이는 숫자만 입력할 수 있도록 하고, 성별은 하나만 선택이 가능하게 작성하세요. 
 또한, 각 입력 양식을 그룹지어 시각적 편의를 제공하세요.-->
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2>설문조사</h2>
+        <p>
+            <form>
+                <fieldset>
+                    <legend>기본정보</legend>
+                    이름: &nbsp;<input type="text" name="이름"><br>
+                    나이: &nbsp;<input type="number" name="나이"></br>
+                    성별: &nbsp;<input type="radio" name="gender" value="남자">남자&nbsp;
+                    <input type="radio" name="gender" value="여자">여자
+                </fieldset>
+                <fieldset>
+                    <legend>관심분야(1개 이상)</legend>
+                    <input type="checkbox" name="hobby" value="디지털콘텐츠">디지털콘텐츠
+                    <input type="checkbox" name="hobby" value="웹프로그래밍">웹프로그래밍
+                    <input type="checkbox" name="hobby" value="데이터베이스">데이터베이스
+                    <input type="checkbox" name="hobby" value="기계학습">기계학습
+                </fieldset>
+                <fieldset>
+                    <legend>다음 문항에 대해 5점 척도로 답하세요</legend>
+                    본 세미나의 주제는 만족스러운가? &nbsp;1<input type="range" min="1" max="5" value="3">5<br>
+                    본 세미나의 초청강사는 만족스러운가? &nbsp; 1<input type="range" min="1" max="5" value="3">5<br>
+                    본 세미나의 강의시간은 적당한가? &nbsp; 1<input type="range" min="1" max="5" value="3">5
+                </fieldset>
+                기타 의견 사항<br>
+                <textarea name="의견" cols="40" row="35">의견을 적으세요</textarea><br>
+                <input type="submit" name="확인" value="확인">&nbsp;
+                <input type="reset" name="취소" value="취소">
+            </form>
+        </p>
+    </body>
+</html>
