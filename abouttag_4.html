@@ -1,0 +1,90 @@
+<p>복습은 review로 하였음.</p><dr />
+<dr />
+<h3>페이지 레이아웃 설정 태그, 시멘틱태그, 이들을 이용하여 웹페이지 제작</h3>
+<p>페이지 레이아웃 설정태그는 block타입과 inline타입으로 나누어져있다.<dr />
+block타입은 아래로 나열되는 경우이고, inline타입은 옆으로 나열되는 경우다.<dr />
+block타입의 대표적인 예로는 div태그가 있고, inline타입으로 대표적인 예는 span태그가 있다.<dr />
+div 태그를 이용해서 웹문서의 레이아웃을 자유롭게 구성할 수 있어야 된다고 한다<dr />
+예시 코드를 통해 알아보도록 하자.</p><dr />
+<body>
+    <div>
+        <h1>MY HOMEPAGE</h1>
+        <hr />
+    </div>
+
+    <div>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+        </ul>
+        <hr />
+    </div>
+
+    <div>
+        <h1>What is HTML5?</h1>
+        <p>HTML5 is gooooooooooooooooooooooooooooooooooooooooooooood!</p>
+        <hr />
+    </div>
+
+    <div>
+        <p>xxx주식회사 서울시 00구00동</p>
+    </div>
+</body>
+<!--레이아웃이 뭔가해서 찾아봤더니 배치라는 의미를 가지고 있다고 한다.
+    페이지 레이아웃은 컴퓨터 그래픽 디자인이나 소프트웨어 디자인에서 
+    각 구성요소를 제한된 공간 안에 효과적으로 배열하는 일을 의미한다.-->
+    <dr />
+<p>이번엔 시맨틱 태그에 대해서 알아보자.<dr />
+    시맨틱 태그는 검색엔진이 효율적으로 검색할 수 있게 특정태그를 사용해서 웹문서를 제작하는 것을 시맨틱 태그라고 한다.
+    아마 시맨틱 태그가 내가 들은 바로는 검색엔진이 무언가를 검색할때 원래는 기존에 있는 문서를 죄다 탐색 해야 하는데<dr />
+    일종의 인스타그램의 해쉬태그 같은 역할을 해서 필터링을 하여 검색엔진의 수고를 좀 덜어주는것으로 알고 있다.<dr />
+    <dr />
+시맨틱 태그의 종류는 다음과 같다<dr />
+<header></header><!--페이지의 헤드영역을 담당한다.-->
+<founder></founder><!--페이지의 하단영역을 담당한다.-->
+<nav></nav><!--페이지의 내비게이션(메뉴) 역할을 한다.-->
+<section></section><!--페이지의 내용을 담당한다.-->
+<article></article><!--section과 유사하며, 글 또는 어떠한 내용을 출력한다.-->
+<aside></aside></p><!--부가적인 내용을 담당한다.--><dr />
+이를 이용한 웹페이지 제작을 다음 코드를 통하여 알아본다</p>
+<dr />
+<!--위의 코드와 비교했을때 구조가 더 잘보인다. 그렇지만 실제로 해봤을때 실페 페이지에 나타나는 차이점은 없지만
+사실 엄청 차이가 날거라고 한다....나도 잘 몰라-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" /><!--해당 웹문서에서 어떤 문자를 쓸건지 입력한 값-->
+    <title></title>
+</head>
+<body>
+    <header>
+        <h1>MY HOMEPAGE</h1>
+        <hr />
+    </header>
+
+    <nav>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+        </ul>
+        <hr />
+    </nav>
+
+    <section><!--근데 이렇게 할거면 왜 메뉴를 만들어 놓은거야?-->
+        <h1>What is HTML5?</h1>
+        <p>HTML5 is goooooooooooooooooooooooooooooooooooooooooooooooooooooooood!</p>
+        <hr />
+    </section>
+
+    <footer>
+        <p>xxx주식회사 서울시 00구00동</p>
+    </footer>
+</body>
+</html>
+<!--한가지 의문이 생기는게 검색엔진이 이렇게 태그를 달아놓으면 어딜 탐색한다는건지 모르겠다.
+결론은 문서 전체를 다 흝는거랑 다를게 뭐람?-->
+<!--그리고 div 태그랑 p 태그의 차이점이 뭐야...??-->
+

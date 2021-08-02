@@ -1,0 +1,80 @@
+예시에 들어있는 코드는 t아카데미에서 수강한 내용을 참고하였습니다.
+<p><h3>저번시간까지 배운내용 복습</h3>
+저번시간에는 기본적인 하이퍼링크와, 페이지내 이동, 계행(띄어쓰기), 문단태그, 헤드라인 태그, 주석태그<br/>
+리스트 태그와 테이블 태그에 대해서 배웠다.</p>
+<br/>
+<p><h2>폼태그와 이미지 태그</h2>
+폼태그는 우리가 구글에서 신청폼을 작성할때 필요한 형식...을 생각하면 된다<br/>
+<br/>
+<h1>폼태그</h1>
+form은 데이터 처리 문서의 주소와 데이터 전달 방식을 속성으로 갖는다.
+<!--여기서 데이터 처리 문서 주소는 url을 의미하고, 데이터 전달방식은 method 를 의미한다.-->
+<form action="#" method="get">
+    <!--여기서 action은 전달주소를 입력하게하는 속성이고 
+    method에서 는 두개의 속성을 고를 수 있는데, 
+    get은 url에 추가로 덧붙여서 서버로 내보내는 것이고,
+    post는 문서의 head부분에 암호화 되서 전송하는 방식이다. -->
+    <!--get은 url에 그대로 덧붙여서 나가는것이기 때문에 보안이 취약하다 비밀번호 같은건 post를 추천!-->
+    이름 : <input type="text" name="uname" /><br />
+    <!--name은 각각 유니크한 값을 가져야 한다.-->
+    아이디 : <input type="text" name="uid" /><br />
+    비밀번호 : <input type="password" name="upw" /><br />
+    연락처 : <input type="text" name="uphone1" size="5" /> - 
+    <input type="text" name="uphone2" size="5" /> - 
+    <input type="text" name="uphone3" size="5" /><br />
+    사진 : <input type="file" name="upic"/> <br />
+    <!--value는 input의 type에 따라서 다양한 용도로 쓰일수 있다. 현재 checkbox에서 사용되는 value는
+    서버에 텍스트를 전달하는 용도다. -->
+    성별구분 : <input type="radio" name="gender" value="m">남, 
+                <input type="radio" name="gender" value="w">여 <br />
+    사용언어 : <input type="checkbox" name="lan" value="kor" checked="checked" />한글, 
+                <input type="checkbox" name="lan" value="eng" />영어, 
+                <input type="checkbox" name="lan" value="jap" />일어, 
+                <input type="checkbox" name="lan" value="chi" />중국어<br />
+     <!--input 태그는 type의 속성을 이용햐서 사용자의 다양한 정보를 얻을 수 있다.-->           
+    자기소개 : <textarea rows="5" cols="20">간단하게 입력하세요.</textarea><br />
+    국적 : <select>
+                <option>KOREA</option>
+                <option>USA</option>
+                <option>JAPAN</option>
+                <option>CHINA</option>   
+               </select><br />
+    좋아하는음식 : <select multiple="multiple">
+        <option>김치</option>
+        <option>불고기</option>
+        <option>파전</option>
+        <option>비빔밥</option>
+    </select><br />
+    <input type="submit"/>
+</form></p>
+<h1>이미지 태그</h1>
+<p>이미지 태그는 말 그대로 이미지를 삽입하게 해주는 태그다<br />
+    이미지 태그는 속성으로 src 를 가지고 있고, 이는 이미지의 위치 정보를 속성값으로 가지게 해주는 속성이다<br />
+    <p><img src="img/Navi_dr.png" alt="꿈 Story"></p>
+    <!-- img의 alt태그는 만약 해당이미지가 문서에 뜨지 않았을시 나올 대체 텍스트 혹은 사진을 설명해주는 글이다.-->
+    <p><img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif" alt="logo"></p>
+	<p><a href="http://www.naver.com" target="_blank"><img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif" alt="logo"></a></p>
+    <!--위 코드는 해당 이미지를 누르면 미리 적용된 링크에 들어가게 설정해놓은 코드다.-->
+    <p><img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510_1.gif" alt="logo"></p>
+    <p><img src="img/Navi_dr.png" alt="꿈 Story" width="500"></p><br />
+    <!--img의 width 속성으로 이미지 크기를 조절 할 수 있다. 숫자의 단위는 픽셀이다.-->
+    <br />
+    이를 리스트화 시켜서 주간랭킹을 리스트와 한 코드는 다음과 같다<br />
+    <table width="300" border="1">
+        <tr>
+            <td>
+                <h1>주간 히트 노래</h1>
+                <hr />
+                <ol>
+                    <li><img src="img/img01.png" alt="어머니 누구니"><a href="#none">어머니 누구니</a></li>
+                    <li><img src="img/img02.png" alt="한번 더 말해줘"><a href="#none">한번 더 말해줘</a></li>
+                    <li><img src="img/img03.png" alt="다른 남자 말고 너"><a href="#none">다른 남자 말고 너</a></li>
+                    <li><img src="img/img04.png" alt="모두가 내 발아래"><a href="#none">모두가 내 발아래</a></li>
+                    <li><img src="img/img05.png" alt="조만간 봐요"><a href="#none">조만간 봐요</a></li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+</p>
+<p>이번 장에서는 이미지 삽입과 폼작성과 관련된 태그를 복습하였다</p>
